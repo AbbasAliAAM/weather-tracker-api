@@ -1,5 +1,6 @@
 package com.example.wheather_api.controller;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -9,6 +10,15 @@ import com.example.wheather_api.model.WheatherRequestResponse;
 import com.example.wheather_api.service.WeatherService;
 
 import jakarta.validation.constraints.NotBlank;
+
+
+@CrossOrigin(
+	    origins = {
+	        "http://localhost:3000",
+	        "https://abbasaliaam.github.io",
+	        "https://*.netlify.app"
+	    }
+	)
 
 @RestController
 @RequestMapping("/aam/weather")
