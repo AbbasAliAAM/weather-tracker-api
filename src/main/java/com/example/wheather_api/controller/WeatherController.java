@@ -17,7 +17,12 @@ import jakarta.validation.constraints.NotBlank;
 	        "http://localhost:3000",
 	        "https://abbasaliaam.github.io",
 	        "https://*.netlify.app"
-	    }
+	    },
+	    methods = {
+	            RequestMethod.GET,
+	            RequestMethod.POST,
+	            RequestMethod.OPTIONS
+	        }
 	)
 
 @RestController
